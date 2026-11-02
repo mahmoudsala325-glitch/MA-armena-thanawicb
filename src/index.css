@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Cairo', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom scrollbar matching school crest */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #071324;
+}
+::-webkit-scrollbar-thumb {
+  background: #173868;
+  border-radius: 4px;
+  border: 1px solid rgba(217, 119, 6, 0.3);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d97706;
+}
+
+/* Subtle Nile & Nubian pattern overlay matching crest parchment */
+.nubian-pattern {
+  background-image: 
+    radial-gradient(rgba(245, 158, 11, 0.12) 1.2px, transparent 1.2px), 
+    radial-gradient(rgba(26, 70, 132, 0.22) 1.2px, transparent 1.2px);
+  background-size: 28px 28px;
+  background-position: 0 0, 14px 14px;
+}
+
+/* Antique Egyptian Gold Gradient from the School Emblem */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #fffbeb 0%, #fef08a 25%, #f59e0b 55%, #d97706 85%, #92400e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Royal Crest Navy Gradient Text */
+.crest-blue-gradient-text {
+  background: linear-gradient(135deg, #93c5fd 0%, #38bdf8 50%, #1d4ed8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glowing halos from crest colors */
+.gold-glow {
+  box-shadow: 0 0 30px -5px rgba(245, 158, 11, 0.35);
+}
+
+.blue-glow {
+  box-shadow: 0 0 35px -5px rgba(26, 70, 132, 0.45);
+}
+
+.crest-card-border {
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  box-shadow: 0 10px 25px -5px rgba(6, 16, 32, 0.7), inset 0 1px 0 0 rgba(254, 243, 199, 0.1);
+}
+
+/* Subtle water wave effect */
+@keyframes nileWave {
+  0%, 100% {
+    transform: translateY(0px) scaleY(1);
+  }
+  50% {
+    transform: translateY(-4px) scaleY(1.02);
+  }
+}
+
+.animate-nile {
+  animation: nileWave 6s ease-in-out infinite;
+}
